@@ -37,7 +37,8 @@ would result in
     *   The library does an exact expression match, so if while registering one uses hasData=True, the library expects 
        the same expression when evaluating
 2.  Standard evaluation rules apply, left to right, expressions in braces are done first
-3.  Elements in the bucket __MUST__ have a accessible attribute _id_ else will be evicted out of the bucket
+3.  Elements in the bucket **MUST** have a accessible attribute _id_ else will be evicted out of the bucket
+
 -----
 
 License
