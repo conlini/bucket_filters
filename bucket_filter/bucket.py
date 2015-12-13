@@ -7,9 +7,9 @@ class Bucket():
     def __check_validity(self, element):
         if isinstance(element, dict):
             if "id" in element:
-                self.elements.extend({element["id"]: element})
+                self.elements[element["id"]]= element
         elif hasattr(element, "id"):
-            self.elements.append({getattr(element, "id"): element})
+            self.elements[getattr(element, "id")]= element
 
     def __check_validity_of_elements(self, elements):
         if elements:
@@ -29,3 +29,6 @@ class Bucket():
             keys = [keys]
         for key in keys:
             self.elements.pop(key, None)
+
+    def __repr__(self):
+        return self.condition + "/" + "{}".format(len(self.elements))

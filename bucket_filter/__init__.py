@@ -4,7 +4,6 @@ from bucket_filter.resolver import parse, evaluate
 
 buckets = {}
 
-
 def get_bucket(expression):
     key = BooleanCondition.build_key(expression)
     return buckets.get(key, None)
@@ -24,6 +23,6 @@ def solve(expression):
     evaluated = {}
     if inner:
         for i in inner:
-            evaluate(expressions["{}".format(i)], evaluated)
-    bucket_final = evaluate(expressions["FINAL"], evaluated)
+            evaluate(expressions["{}".format(i)], evaluated, buckets)
+    bucket_final = evaluate(expressions["FINAL"], evaluated, buckets)
     return bucket_final.elements.values()
