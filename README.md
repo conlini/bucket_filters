@@ -11,6 +11,9 @@ data, each identified by a unique ID.
 It then allows for combining various buckets in a serious of conditinal operators and filters out those IDs that match 
 a given expression.
 
+*   Currently supported operators is &(AND), ||(OR)
+*   The library currenly only supports Boolean expressions
+
 
 Example
 -------

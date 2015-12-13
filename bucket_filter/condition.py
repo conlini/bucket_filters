@@ -23,4 +23,4 @@ class BooleanCondition(Condition):
 
     @key.setter
     def key(self, key):
-        self.key = Condition.build_key(key)
+        self.__key = Condition.build_key(key)
